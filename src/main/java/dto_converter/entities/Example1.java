@@ -28,4 +28,14 @@ public class Example1 {
     public void setTestColumn(String testColumn) {
         this.testColumn = testColumn;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Example1{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", age=").append(age);
+        sb.append(", testColumn='").append(testColumn).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

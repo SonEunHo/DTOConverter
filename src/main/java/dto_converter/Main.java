@@ -13,5 +13,10 @@ public class Main {
 
         Example2 example2 = DTOConverter.convert(example1, Example2.class);
         System.out.println(example2.toString());
+
+        example2.setAge(-1);
+        example2.setName("nothing");
+        example2.setTestColumn("nothing column");
+        System.out.println(DTOConverter.<Example2, Example1>convert(example2, example1).toString());
     }
 }
